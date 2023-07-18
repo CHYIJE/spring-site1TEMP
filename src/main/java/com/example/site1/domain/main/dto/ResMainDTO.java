@@ -3,6 +3,7 @@ package com.example.site1.domain.main.dto;
 import com.example.site1.model.user.entity.UserEntity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@Builder
 public class ResMainDTO {
 
 
@@ -21,7 +23,12 @@ public class ResMainDTO {
     private String id;
 
     public static ResMainDTO fromEntity(UserEntity userEntity){
-        return new ResMainDTO(userEntity.getIdx(), userEntity.getId());
+
+    // return new RESmAINdto(userEnTITY.GetId());
+
+        return new ResMainDTO.build()
+            .id(userEntity.getId())
+            .builder();
     }
     
 }

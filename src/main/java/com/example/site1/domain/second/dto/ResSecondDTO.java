@@ -3,6 +3,7 @@ package com.example.site1.domain.second.dto;
 import com.example.site1.model.post.entity.PostEntity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-
+@Builder
 public class ResSecondDTO {
     
     private String title;
@@ -19,10 +20,16 @@ public class ResSecondDTO {
     private Integer userIdx;
 
     public static ResSecondDTO fromEntity(PostEntity postEntity){
-        ResSecondDTO resSecondDTO = new ResSecondDTO();
-        resSecondDTO.setTitle(postEntity.getTitle());
-        resSecondDTO.setContent(postEntity.getContent());
-        resSecondDTO.setUserIdx(postEntity.getUserIdx());
-        return resSecondDTO;
+        // ResSecondDTO resSecondDTO = new ResSecondDTO();
+        // resSecondDTO.setTitle(postEntity.getTitle());
+        // resSecondDTO.setContent(postEntity.getContent());
+        // resSecondDTO.setUserIdx(postEntity.getUserIdx());
+        // return resSecondDTO;
+
+        return new ResSecondDTO().builder()
+            .title(postEntity.getTitle())
+            .content(postEntity.getContent())
+            .userIdx(postEntity.getUserIdx())
+            .build();
     }
 }
