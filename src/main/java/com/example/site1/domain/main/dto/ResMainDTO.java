@@ -26,9 +26,9 @@ public class ResMainDTO {
 
     // return new RESmAINdto(userEnTITY.GetId());
 
-        return new ResMainDTO.build()
+        return new ResMainDTO().builder()
             .id(userEntity.getId())
-            .builder();
+            .build();
     }
     
 }
