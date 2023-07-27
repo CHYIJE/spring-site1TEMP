@@ -15,7 +15,7 @@ public class SecondMainController {
     
     private final SecondService secondService;
 
-    @GetMapping("second")
+    @GetMapping("/second")
     public String getSecondPage(Model model){
         
         ResSecondDTO dto = secondService.getSecondData();
