@@ -8,4 +8,6 @@ import com.example.site1.model.user.entity.UserEntity;
 @Repository
 public interface UserRepository extends JpaRepository<UserEntity, Integer> {
 
+    //
+
 }
