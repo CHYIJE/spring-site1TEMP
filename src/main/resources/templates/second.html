@@ -7,16 +7,10 @@
 </head>
 <body>
     <h1>게시글 리스트</h1>
-    <div th:each="post : ${dot.postList}">
+    <div th:each="post : ${dto.postList}">
         <div>제목:<span th:text ="${post.title}"></span></div>
         <div>내용:<span th:text ="${post.content}"></span></div>
         <div>글쓴이 번호:<span th:text ="${post.user.idx}"></span></div>
-        <hr>
-    </div>
-    <div>
-        <div>제목:하하</div>
-        <div>내용:하하</div>
-        <div>글쓴이 번호: 1</div>
         <hr>
     </div>
 </body>

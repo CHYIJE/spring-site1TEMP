@@ -23,6 +23,6 @@ public class MainController {
 
     model.addAttribute("dto", dto);
 
-    return "main/main";        
+    return "main";        
     }
 }
